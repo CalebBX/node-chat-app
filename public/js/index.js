@@ -1,3 +1,12 @@
+var test = {
+    message : function(){
+        socket.emit('createMessage', {
+            from: 'Test Client', 
+            text: 'This is a test message.'
+        });
+    }
+}
+
 var socket = io();
 
 socket.on('connect', function(){
